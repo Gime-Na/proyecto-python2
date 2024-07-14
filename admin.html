@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Tabla de usuarios</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./css/style.css">
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">-->
+</head>
+<body>
+    <header class="container-nav">
+        <nav class="navigation"><!--NAV-BAR-->
+            <a href="index.html" class ="logo">
+                <img src="img/logo-ESTIMAT-03.png" alt="logo-estimat">
+            </a>
+           <!--BOTON HAMBURGUESA el valor checkbox permite activar y desactivar una opcion -->
+           <input type="checkbox" id="menu-check"><!--input crea un campo de entrada/CHEQUEAR/-->
+           <label class="nav-button" for="menu-check"><!--label crea una etiqueta para identificar un elemento de formulario, el BOTON HAMBURGUESA-->
+             <span></span>
+             <span></span>
+             <span></span>
+           </label>
+           <!-- MENU -->
+           <ul class="nav-links">
+             <li><a href="index.html">Home</a></li>
+             <li><a href="#">About</a></li>
+             <li><a href="contact.html">Contact</a></li>
+             <li><a href="login.html"><img class="usuario" src="/img/usuario.png" alt=""></a></li>
+             
+           </ul>
+           
+           <!--crea un usuario-->
+           
+      
+        </nav>
+      
+      </header>
+    <main>
+        <div id="app" class="container">
+            
+            <br>
+            
+            <br><br>
+            <div v-if="error">
+                <p>Lo sentimos , ........</p>
+            </div>
+            <div v-else>
+                <section v-if="cargando">
+                    <div class="spinner-border"></div>
+                    <p>Cargando .....</p>
+                </section>
+                <section v-else><!--si término de cargar armar tabla-->
+                    <div >
+                        <table>
+                            <caption>Usuarios</caption>
+                            <tr>
+                                <th>Id</th>
+                                <th>Email</th>
+                                <th>Contraseña</th>
+                                <th>Rol</th>
+                            </tr>
+                            <tbody>
+                                <tr class=""  v-for="usuario in usuarios">
+                                    <td>{{usuario.id}}</td>
+                                    <td>{{usuario.email}}</td>
+                                    <td>{{usuario.contrasena}}</td>
+                                    <td>{{usuario.rol}}</td>
+                                    <td>
+                    			        <a class="boton-crud" :href="'usuario_update.html?id='+ usuario.id" >Editar</a>
+                                      <button type="button" class="boton-crud" v-on:click="eliminar(usuario.id)" >Eliminar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!--Link de Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><!--Link de VUE-->
+    <script src="./js/script.js"></script>
+</body>
+</html>

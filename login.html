@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Login</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link rel="stylesheet" href="./css/style.css">
+  
+</head>
+<body>
+  <header class="container-nav">
+    <nav class="navigation"><!--NAV-BAR-->
+      <a href="index.html" class ="logo">
+        <img src="img/logo-ESTIMAT-03.png" alt="logo-estimat">
+      </a>
+      <!--BOTON HAMBURGUESA el valor checkbox permite activar y desactivar una opcion -->
+      <input type="checkbox" id="menu-check"><!--input crea un campo de entrada/CHEQUEAR/-->
+      <label class="nav-button"
+        for="menu-check"><!--label crea una etiqueta para identificar un elemento de formulario, el BOTON HAMBURGUESA-->
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <!-- MENU -->
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="login.html"><img class="usuario" src="/img/usuario.png" alt=""></a></li><!--login-->
+        
+      </ul>
+
+
+
+    </nav>
+
+  </header>
+  
+  
+  <main>
+    
+    <div class ="container-form" id="app">
+
+      <!--FORMULARIO DE LOGIN-->
+      <form  class="form-login" ><!--@submit.prevent="login()"-->
+        <h1>Log in to</h1>
+      
+        <label for="email"></label>
+        <input type="text" :class="{'error' :validEmail}" name="email" id="email" placeholder="Email" v-model="email"/><br>
+        
+        <label for="password"></label>
+        <input type="password" :class="{'error':validPassword}" name="password" id="password" placeholder="Password" v-model="password"/><br>
+      
+        <button type="button" class="button-form" v-on:click="login()">Log in</button><!--que me lleve a HOME Y ME MUESTRE LA TABLA CON BOTON EDITAR(MISMO FORMULARIO UPDATE Y NUEVO) Y ELIMINAR-->
+        <a href="usuario_agregar.html" class="crear" >Sign Up</a>
+      </form>
+      
+    </div>
+  </main>
+  
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+  
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  
+  <script src="./js/script.js"></script>
+</body>
+</html>
