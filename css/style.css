@@ -71,6 +71,7 @@ body {
     color: #000;
     
 }
+
 /*contenedor para posicionar la tabla*/
 .container {
     width: 100%;
@@ -118,13 +119,14 @@ table {
     font-weight: 600;
     padding: 7px;
     border-radius: 6px;
-    
+    margin: 3px;
+    cursor: pointer;
 
 }
 /******************** formulario LOGIN **********************/
 .form-login{
     width: 23.75em;
-    height: 18.75em;
+    height: 20.75em;
     background-color: #ffffff;
     position: absolute;
     transform: translate(-50%, -50%);
@@ -164,6 +166,7 @@ table {
     font-weight: 600;
     letter-spacing: 0.15em;
     margin-top: 0.8em;
+    margin-bottom: 20px;
     background-color: white;
     
 }

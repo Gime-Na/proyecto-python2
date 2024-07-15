@@ -66,7 +66,7 @@
                                     <td>{{usuario.contrasena}}</td>
                                     <td>{{usuario.rol}}</td>
                                     <td>
-                    			        <a class="boton-crud" :href="'usuario_update.html?id='+ usuario.id" >Editar</a>
+                    			        <button type="button" class="boton-crud" :href="'usuario_update.html?id='+ usuario.id" >Editar</button>
                                       <button type="button" class="boton-crud" v-on:click="eliminar(usuario.id)" >Eliminar</button>
                                     </td>
                                 </tr>
