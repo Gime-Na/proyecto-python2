@@ -1,0 +1,736 @@
+*{
+    margin: 0;
+    padding: 0;/*para generar espacio alrededor de los elementos*/
+    box-sizing: border-box;/*permite incluir/ajustar el padding y el margin sin pasar la dimensión*/
+}
+body{
+    background-color: #fff;
+    color:black;
+    font-size: 19px;
+    font-family: 'Open Sans', sans-serif; /* Open Sans para el cuerpo */;
+}
+/*main*/
+/******TIPOGRAFIA**********/
+h1{
+    font-size: 46px; /* Tamaño de fuente para h1 en pantalla grande */
+    font-weight: bold; /* Texto en negrita */
+    margin-top: 40px;
+}
+h2{
+    font-size: 40px; /* Tamaño de fuente para h1 en pantalla grande */
+    font-weight: bold; /* Texto en negrita */
+    margin-top: 30px;
+    justify-content: center;
+    text-align: center;
+    
+
+}
+.titulo{
+    
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 30px 50px 10px 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+/***TEXTO RECURSOS***/
+h5{
+    letter-spacing: 0.10em;
+    font-weight: 700;
+    font-size: 12px;
+}
+/***TEXTO BUTTON***/
+#span {
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: 0.10em;/*espacio entre letras*/
+    justify-content: center;
+}
+/*****sección IMAGEN DE FONDO******/
+.container-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/img/tyler-nix.jpg");
+    background-color: #cccccc;
+    height: 750px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.container-text {
+    width: 70%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    color: white;
+    line-height: 150%;
+    font-size: 35px;
+    
+}
+/**boton blanco*/
+#blanco{
+    border-radius: 30px;
+    padding: 18px;
+    margin: 20px;
+    font-weight: 900;
+    border:none;
+    background-color: white;
+    font-size: 14px;
+    padding-top: 20px;
+}
+
+/****TABLA******/
+#tabla{
+    width: 100%;
+    min-height: 750px;
+    overflow: hidden;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    
+}
+table{
+    
+    border-collapse: collapse;
+    padding: 20px;
+    margin: 70px 20px 0 20px;
+    align-items: center;
+    border-left: none;
+    border-right: none;
+    justify-content: center;
+    
+
+}
+
+table li{
+   margin: 10px;
+   line-height: 130%;
+   text-justify: auto;
+   font-weight: normal;
+   font-size: 20px;
+   
+   
+   
+}
+
+td {
+   line-height: 130%;
+   padding:20px;
+   font-weight: 700;
+   text-justify: inter-word;
+   
+ 
+}
+.primerborde{
+    border-bottom: 2px solid black;
+}
+.segundoborde{
+    border-bottom: 2px solid black;
+}
+.container-nav{
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    
+}
+/*****NAVEGADOR******/
+.navigation{
+    
+    width: 100%;
+    top: 0;
+    left: 0 ;
+    padding: 14px 16px;
+    justify-content: space-between;
+    display: flex;
+    position: relative;
+    align-items: center;
+    position: fixed;
+    background: #fff;
+    z-index: 10;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.308);
+    
+}
+.nav-links{
+    float:right; /*para posicionar un elemento al lado de otro elemento*/
+    z-index: 2;
+    display: flex;/**/
+}
+
+/**** oculta checkbox *****/
+.nav-button, #menu-check {
+    display: none;
+}
+.nav-links a{
+    position: relative;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin: 0 10px;
+    color: black;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .115em;
+    font-family:"poppins", sans-serif;
+
+}
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap:1em;
+}
+.nav-links a:hover{
+    color: #f47451;
+}
+.usuario{
+    height: 16px;
+    width: auto;
+    color: #000;
+    
+}
+/***contact***/
+.nav-social{
+    display: flex;
+    justify-content: space-around;
+    min-width: 200px;
+    
+}
+.nav-social a{
+    display: block;
+    text-decoration: none;
+    font-size: 15px;
+    width: 40px;
+    height: 40px;
+    line-height: 39px;
+    text-align: center;
+    color: black;
+    border-radius: 50%;
+    outline: none;
+    padding: 0;
+    float: left;
+    background-color: white;
+    align-items: center;
+    
+}
+.nav-contact{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;/**/
+    padding: 2em;/**/
+    background-color: #f1f1f1;
+    align-items: center;
+   
+}
+/*****pagina principal***/
+.image1{
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background-image: url("/img/chica---lateral---inicio.png");
+    background-color: #f1f1f1;
+    background-size: 590px 700px;;
+    background-position: right;
+    background-repeat: no-repeat;
+   
+}
+/*flex-box
+/**** CAJA PADRE ***/
+.container-flex{
+    display:flex;
+    width: 430px;/*ancho*/
+    flex-direction: column;/**/
+    justify-content: left;
+    text-align: left;
+    padding-left: 35px; 
+    align-items: left;
+    
+}
+
+.box1{
+    
+    flex: 1;/**/
+    margin: 20px;
+    padding-top: 80px;
+    
+    
+}
+.box2{
+    
+    flex: 1;/**/
+    line-height: 150%;
+    text-justify: inter-word;
+    margin: 20px;
+    width: 430px;
+    
+}
+.box2 p{
+    font-size: 20px;
+    
+}
+/****************/
+/*Flex-box*/
+.column{
+    width: 500px;
+    flex-direction: column;
+    
+}
+.container-row{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;/*Los elementos flexibles se ajustan en varias líneas según sea necesario.*/
+    padding-top: 30px;
+    padding-bottom: 30px;
+    justify-content: center;/*****controla la alineación de todos los elementos en el eje principal*****/
+    align-items: center;/****controla la alineación de todos los elementos en el eje transversal****/
+    overflow: hidden;
+    
+}
+/****TARJETAS****/
+.card{
+    width: 170px;
+    height: 290px;
+    padding: 10px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;/*Los elementos flexibles se colocan en una columna en el mismo sentido que
+    el eje principal.*/
+    align-items: center;
+    text-align: center;
+    border-radius: 700px;
+    justify-content: center;
+    border: 2px solid black;
+    line-height: 100%;
+   
+
+}
+.card-gradient{
+    width: 170px;
+    height: 290px;
+    padding: 10px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;/*Los elementos flexibles se colocan en una columna en el mismo sentido que
+    el eje principal.*/
+    align-items: center;
+    text-align: center;
+    border-radius: 700px;
+    justify-content: center;
+    /*background: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)) padding-box padding-box, 
+    linear-gradient(-225deg, rgb(117, 240, 148), rgb(117, 178, 240)) border-box border-box;*/
+    background: linear-gradient(rgb(255, 255, 255), #ffffff) padding-box padding-box,
+     linear-gradient(-225deg, #b275f0, #f0758a) border-box border-box;
+    border: 2px solid transparent;
+    line-height: 100%;
+
+}
+.img-card{
+    transform: translate(0%, -40%);
+    height: 80px;
+    width: auto;
+}
+/**************/
+#video{
+    display:block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    gap: 10px;
+    background-image: linear-gradient(to bottom, #f9cae5, #f2d3ef, #eddcf6, #eae4f9, #eaebfa,
+     #edeffa, #f0f3fa, #f4f6fa, #f7f8fb, #fafafc, #fdfdfe, #ffffff);
+}
+
+#video div{
+   display: flex;
+   padding: 20px;
+   justify-content: center;
+    
+}
+#video div iframe{
+    
+    width: 100%;
+    height: 100%;
+
+}
+
+/*****CONTENEDOR PADRE*******/  
+.contenedor{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #f1f1f1;
+    align-items: center;
+    justify-content:center;
+    gap: 10px;
+    overflow: hidden;
+    
+   
+}
+.contenedor > div{
+    justify-content:center ;
+    padding: 30px;
+    
+    
+}
+.div-1{
+    flex:1;
+    width: 600px;
+    overflow: hidden;
+    
+}
+.div-2{
+    
+    flex: 1;
+    overflow: hidden;
+    text-align: left;
+    margin-right: 10px;
+    margin-left: 30px;
+}
+.div-2 p {
+    width: 460px;
+    line-height: 150%;
+    padding-top: 15px ;
+    margin-bottom: 25px;
+    text-justify: inter-word;
+    font-size: 20px;
+    
+}
+.img-flex{
+    width:100%;
+    height: 100%;
+}
+    
+/*****BOTON ANIMADO***/
+@keyframes animaboton {
+    0%   {top: 0px; background: violet; width: 100px;}
+    100% {top: 200px; background: lightblue; width: 300px;}
+}
+#button{
+    border-radius: 40px;
+    padding: 0 25px;
+    margin: 40px 35px;
+    align-items: center;
+    display:inline-flex;
+    height: 75px;
+    border: 3px solid transparent;
+    animation: animaboton 5s infinite;
+    
+}
+/***CONTACTO***/
+#form-contact{
+    text-align: center;
+    justify-content: center;
+    
+}
+
+.text-form{
+    
+    margin: 3em 0 3em 0;
+}
+.container{
+    padding: 25px 30px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    margin-top: 50px;
+}
+/*#contacts{
+    z-index: 2;
+}*/
+
+/**FIELSET**//*Este elemento agrupa otros elementos de formulario. Se usa para crear secciones dentro de formularios extensos*/
+#form-content{ 
+    max-width: 500px;
+    font-size: 11px;
+    color: #666666;
+    margin: 0 auto;
+    height: 500px;
+    margin-top: 40px;
+}
+/**LABEL identifica un elemento de form**/
+#form-content label{
+    display: block;
+    text-align: center;/*se aplica a elementos de bloque y celdas de tabla*/
+    margin-top: 30px;
+    font-size: 1em;
+    text-transform: uppercase;
+    color: #666;
+}
+/****margin top*****/
+.m-top{
+    float: left;
+    margin-top: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+#form-content input{
+    /*border:1px solid #ccc;
+    border-radius: 5px;
+    border-bottom-width: 2px;
+    /*border:1px solid #666;*/
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    float: left;
+    width: 100%;
+    height: 35px;
+    color: #666;
+    font-size: 1em;
+}
+input::placeholder {
+    color: #666;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#form-content textarea{
+    /*border:1px solid #ccc;
+    border-radius: 5px;
+    border-bottom-width: 2px;*/
+    /*background: none repeat scroll 0 0 rgba(2522, 255, 255, 0.2);*/
+    /*border: 1px solid #666;*/
+    border: none;
+    color: #666;
+    height:200px;
+    width: 100%;/*ocupa el 100% del contenedor FIELSET*/
+    resize: none;
+    outline: none;
+    padding: 10px;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    
+}
+/**grid**/
+.grid-inputs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5em;
+    
+}
+div,fieldset,label {
+    border: none;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    
+}
+/****BOTON ENVIAR****/
+.submit_btn {
+    border: none;
+    padding: 5px 15px 5px 15px;
+    width: 100%; /*ocupa el 100% del contenedor FIELSET*/
+    height: 70px;
+    margin: 0 auto;
+    cursor: pointer;
+    letter-spacing: 3px;
+    position: relative;
+    background-color: #fff;
+    font-weight: bold;
+    
+}
+#submit_btn:hover{
+    color: #000;
+}
+  
+/*****FOOTER****/
+footer{
+    position: relative;
+    bottom: 0;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    min-height: 200px;
+    text-align: center;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.logo-footer{
+    height: 50px;
+    width: auto;
+    display: block;
+    align-items: center;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 20px;
+}
+
+footer a{
+    color: #ffffff;
+    text-decoration: none;
+    
+}
+
+footer p{
+    padding-top: 15px;
+    color: #ffffff;
+    font-size: 12px;
+}
+.footer-social{
+    padding: 0 1.875rem 1.25rem;
+    
+}
+.footer-social-list{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.footer-social-list a{
+    text-decoration: none;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 35px;
+    text-align: center;
+    color: #f1f1f1;
+    margin-bottom: 20px;
+    outline: none;
+    padding: 0;
+    float: left;
+    
+}
+.footer-social-list a:hover{
+    color: #ff8600;;
+
+}
+
+.footer-social-list li{
+    margin: 0.5rem;
+    font-size: 1.25rem;
+    list-style: none;
+}
+
+
+/* Media query para pantallas más pequeñas */
+@media screen and (max-width: 600px) {
+    .nav-social{
+        width: 15%;
+        justify-content: center;
+        gap:7px;
+    }
+
+    .header-container .logo{
+        width: 100%;
+        display: block;
+    }
+    
+    h1, h2 {
+        font-size: 40px; /* Tamaño de fuente para h1 en pantalla pequeña */
+    }
+    body {
+        font-size: 14px; /* Tamaño de fuente para h2-h6 en pantalla pequeña */
+    }
+    .contenedor{
+        display: flex;
+        height: 200vh;
+        flex-direction: column;
+    }
+    .div-1, .div-2{
+        width: 100%;
+    }
+    
+    .image1{
+        width: 100%;
+    }
+    .container-image{
+        width: 100%;
+    }
+    .container-text{
+        font-size: 20px;
+    }
+
+    footer{
+        bottom: 0;
+        width: 100%;
+    }
+    
+    
+    
+}
+
+/*****MENU RESPONSIVO******/
+
+/*para poner los hipervinculos en bloque*//*la palabra only evita que los navegadores antiguos que no admitan media queries, apliquen los estilos dados*/
+@media only screen and (max-width: 768px) {/*SI el dispositivo es menor a 600px*/
+    /*.nav-button{
+        display: none;
+    }*/
+    .nav-links{
+        display: none;
+    }
+    /*span hamburger*/
+    .nav-button{
+        width:46px;
+        height: 36px;
+        top:18px;
+        right:30px;
+        padding:4px;
+        display:block;
+        z-index:3;/*hace que los elementos sibling no hagan overlap*/
+        cursor:pointer;
+    }
+    /*dibujamos una linea recta por cada span creando un menu hamburguesa*/
+    .nav-button span{
+        width:100%;
+        height:4px;
+        float:left;
+        margin-bottom:6px;
+        background:#666;
+        display: block;
+        transition: all 0.25s ease;
+        transform-origin: 0px 100%;
+     
+    }
+    /*****BARRA DE NAVEGACIÓN*****/
+    /*.nav-links{
+        position: absolute;
+        display:block;/*fles*//*
+        background-color: rgba(20, 20, 20, 0.95);
+        width: 100%; /*ENTONCES que cada hipervinculo mida un 100%*//*ES EL MISMO RESULTADO QUE PONERLO EN BLOQUE*//*
+        height: 700px;;     
+        top: 0;
+        left: 0;
+        align-items: center;
+        padding-top: 200px;
+        gap: 70px;
+        flex-direction: column;
+        
+    }
+    .nav-links a{
+        padding: 2px;
+        display: block;
+        text-transform: none;
+        color: #fff;
+        font-size: 20px;
+        border-radius: 0;
+    }
+    .nav-links li{
+        justify-content: center;
+
+    }
+    .nav-links a:hover {
+        color: white;
+        border:1px solid white;
+       
+    }
+    #menu-check:not(:checked) ~ .nav-links{
+        display: none;
+    }*/
+    
+  }

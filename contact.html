@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estimat</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/inicio.css">
+  <link rel="icon" href="img/estimatico.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header class="container-nav">
+        <nav class="navigation"><!--NAV-BAR-->
+          <a href="index.html" class ="logo">
+            <img src="img/logo-ESTIMAT-03.png" alt="logo-estimat">
+          </a>
+          <!--BOTON HAMBURGUESA el valor checkbox permite activar y desactivar una opcion -->
+          <input type="checkbox" id="menu-check"> <!--input crea un campo de entrada/CHEQUEAR/-->
+          <label class="nav-button"
+            for="menu-check"><!--label crea una etiqueta para identificar un elemento de formulario, el BOTON HAMBURGUESA-->
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+          <!-- MENU -->
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html"><img class="usuario" src="/img/usuario.png" alt=""></a></li><!--login-->
+            
+          </ul>
+    
+    
+    
+        </nav>
+    
+      </header>
+
+  <!-- <header class="header-container">
+    
+    
+    
+    
+  </header> --> 
+   
+  <main>
+    
+    
+
+    <section id="form-contact">
+    
+    
+        <div class="container">
+    
+            <p class="text-form">¿Te gustaria compartir tu email para conocer más y cognitición con nosotros?</p>
+    
+            <form id="myForm">
+                <fieldset id="form-content">
+                    <div class="grid-inputs">
+                        <input type="text" id="name" name="name" placeholder="Nombre" value="">
+                        <input type="text" id="lastname" name="lastname" placeholder="Apellido" value="">
+                    </div>
+                    <label for="email" class="m-top"></label>
+                    <input type="email" id="email" name="email" placeholder="Ingrese su email">
+                    <label for="message" class="m-top"></label>
+                    <textarea id="message" name="message"
+                        placeholder="Sobre qué quieres hablar?"></textarea><!--campo de entrada para insertar multiples lineas de texto-->
+                    <label>
+                        <button class="submit_btn" id="submit_btn" value="ENVIAR" onclick="validar()">
+                            ENVIAR
+    
+                        </button>
+                </fieldset>
+            </form>
+            <!--devuelve un mensaje de validación-->
+            <div class="nav-contact">
+                <nav class="nav-social">
+        
+                    <a href="https://www.instagram.com/sistemaestimat/" class="fa fa-instagram"></a>
+                    <a href="http://www.youtube.com/@sistemaestimat" class="fa fa-youtube-play">
+                    <a href="https://www.facebook.com/sistemaestimat" class="fa fa-facebook"></a>
+                </nav>
+            </div>
+    
+    </section>
+    
+
+    
+
+  </main>
+  <footer>
+    <div>
+      <ul>
+        <li>
+          <ul>
+            <li>
+              <!--<svg></svg>-->
+              <img class="logo-footer" src="./img/logo-ESTIMAT-04.png" alt="logo-footer">
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <br><br>
+
+    <!--<div class="footer-separator"></div>-->
+    <p> Copyright &copy; 2024 SistemaEstimat. Todos los derechos reservados.</p>
+  </footer>
+  <script>
+    let nombre = document.getElementById("name");
+    let apellido = document.getElementById("lastname");
+    let correo = document.getElementById("email");
+    let mensaje = document.getElementById("message");
+
+    function validar() {
+      var textoError, campo;
+      textoError = "";
+
+      campo = document.getElementById("name");
+
+
+      if (campo.value.length == 0) {
+        textoError = "nombre vacio, ";
+      }
+
+      campo = document.getElementById("lastname");
+
+
+      if (campo.value.length == 0) {
+          textoError += "apellido vacio, ";
+        }
+
+      campo = document.getElementById("email");
+
+      if (campo.value.length == 0) {
+        textoError += "email vacio, ";
+      }
+
+      campo = document.getElementById("message");
+
+      if (campo.value.length == 0) {
+        textoError += "mensaje vacio ";
+      }
+
+      if (textoError.length != 0) {
+        alert(textoError);
+      }
+
+
+    }
+  </script>
+
+</body>
+
+</html>
